@@ -1,0 +1,46 @@
+.overlay {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	text-align: center;
+	display: none;
+	background-color: #99999978;
+	z-index: 1000 !important;
+}
+
+.spinner-border {
+	top: 50% !important;
+	position: absolute;
+}
+
+h2 {
+	font-size: 30px;
+	text-align: center;
+	width: 100%;
+	background: #1462dc;
+	padding: 13px;
+	line-height: 30px;
+	color: white;
+}
+
+.green {
+	background: rgb(16, 145, 74)
+}
+
+.result,
+.result-green {
+	display: block;
+	margin-top: 5px;
+	padding: 10px;
+	background-color: #e0fbff;
+	border-radius: 4px;
+	font-weight: normal;
+	border: solid 0.25px;
+	min-height: 300px;
+	max-height: 300px;
+	overflow: auto;
+}
+
+.result-green {
+	background-color: rgb(224, 255, 226);
+}

@@ -1,0 +1,101 @@
+<html>
+
+<head>
+    <title>Async and Multiprocessing</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', path='/app.js') }}"></script>
+    <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="overlay">
+        <div class="spinner-border text-primary" role="status"></div>
+    </div>
+    <h2>Sync, Async, MultiProcess, MultiThread - I/O Bound </h2>
+    <div class="container">
+        <br>
+        <div class="row">
+            <div class="col-md-3">
+                <label for="sleep">Time to response (in seconds)</label>
+                <input type="number" class="form-control" id="input-sleep" value="2">
+            </div>
+            <div class="col-md-3">
+                <label for="sleep">Number of requests</label>
+                <input type="number" class="form-control" id="input-requests" value="10">
+            </div>
+        </div>
+
+        <br>
+        <div class="row">
+            <div class="col-sm-3">
+                <button type="button" class="form-control btn btn-primary btn-block" id="btn-sync">Sync</button>
+            </div>
+            <div class="col-sm-3">
+                <button type="button" class="form-control btn btn-primary btn-block" id="btn-async">Async</button>
+            </div>
+            <div class="col-sm-3">
+                <button type="button" class="form-control btn btn-primary btn-block" id="btn-mt">Multi-Thread</button>
+            </div>
+            <div class="col-sm-3">
+                <button type="button" class="form-control btn btn-primary btn-block" id="btn-mp">Multi-Process</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <span id="result-sync" class="result"></span>
+            </div>
+            <div class="col-sm-3">
+                <span id="result-async" class="result"></span>
+            </div>
+            <div class="col-sm-3">
+                <span id="result-mt" class="result"></span>
+            </div>
+            <div class="col-sm-3">
+                <span id="result-mp" class="result"></span>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <h2 class="green">Single, MultiProcess, MultiThread - CPU Bound</h2>
+    <div class="container">
+        <br>
+        <div class="row">
+            <div class="col-md-3">
+                <label for="n_jobs">Number of jobs to execute</label>
+                <input type="number" class="form-control" id="input-jobs" value="15">
+            </div>
+        </div>
+
+        <br>
+        <div class="row">
+            <div class="col-sm-4">
+                <button type="button" class="form-control btn btn-success btn-block" id="btn-heavy-single">Single Process</button>
+            </div>
+            <div class="col-sm-4">
+                <button type="button" class="form-control btn btn-success btn-block" id="btn-heavy-mt">Multi-Thread</button>
+            </div>
+            <div class="col-sm-4">
+                <button type="button" class="form-control btn btn-success btn-block" id="btn-heavy-mp">Multi-Process</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <span id="result-heavy-single" class="result-green"></span>
+            </div>
+            <div class="col-sm-4">
+                <span id="result-heavy-mt" class="result-green"></span>
+            </div>
+            <div class="col-sm-4">
+                <span id="result-heavy-mp" class="result-green"></span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
