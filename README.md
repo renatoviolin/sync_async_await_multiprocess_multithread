@@ -1,4 +1,4 @@
-# Sync x Async x MultiThread x MultiProcess IO and CPU Boud Comparison
+# Comparing Sync vs Async vs Multithread vs Multiprocess I/O and CPU Bound
 
 This repository show the code to implement and compare the results between those concepts.
 
