@@ -8,6 +8,9 @@ Here we simulate two scenarios:
 
 With those two scenarios we can see how thos different kind of techiniques are better than others.
 
+Hope with this application you can decide what approach to use in different situations.
+
+
 ## Demo
 <img src="img/img1.jpg">
 <img src="img/img2.jpg">
