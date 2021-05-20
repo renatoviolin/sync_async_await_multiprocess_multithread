@@ -42,8 +42,8 @@ Hope with this application you can decide what approach to use in different situ
 ## Install
 1. Clone this repository
 ```bash
-git clone https://github.com/renatoviolin/Deploying-YOLOv5-fastapi-celery-redis-rabbitmq.git
-cd Deploying-YOLOv5-fastapi-celery-redis-rabbitmq
+git clone https://github.com/renatoviolin/sync_async_await_multiprocess_multithread.git
+cd sync_async_await_multiprocess_multithread
 ```
 
 2. Install packages
